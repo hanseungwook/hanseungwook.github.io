@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>hey, i'm seungwook.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,400&family=Geist+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--fg:#111;--muted:#444;--link:#1d4ed8;--square:#6c5ce7;--max:760px}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale} 
+.mono, h1, h2, h3, h4, .topnav, li, pre, code, kbd, samp {font-family:"Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace}
+.wrapper{max-width:var(--max);margin:0 auto;padding:56px 24px 120px;position:relative}
+.brand{position:fixed;top:20px;left:20px;width:18px;height:18px;background:var(--square);border-radius:2px}
+.topnav{position:fixed;top:20px;right:20px;font-size:13px;letter-spacing:.02em;font-family:"Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+.topnav a{margin-left:18px;color:var(--muted);text-decoration:none;border-bottom:1px solid transparent}
+.topnav a:hover{color:var(--fg);border-bottom-color:var(--fg)}
+h1{font-size:40px;line-height:1.15;margin:0 0 8px;font-weight:700;font-family:"Geist Mono", monospace}
+.lead{margin:0 0 24px;color:var(--muted);font-family:"Inter", sans-serif}
+.section{margin:36px 0}
+.section h2{font-size:14px;margin:0 0 10px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;font-family:"Geist Mono", monospace}
+ul{margin:8px 0 0 18px;padding:0;font-family:"Geist Mono", monospace}
+li{margin:8px 0}
+a{color:var(--link);text-underline-offset:3px}
+a:hover{opacity:.85}
+hr{border:0;height:1px;background:#eee;margin:28px 0}
+.footer{color:#777;font-size:13px;margin-top:60px;font-family:"Geist Mono", monospace}
+@media (max-width:640px){h1{font-size:34px}.topnav{position:static;margin-bottom:12px}.brand{position:absolute}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&family=Geist+Mono:wght@300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="brand"></div>
+<nav class="topnav" aria-label="primary">
+  <a href="#contact">contact</a>
+  <a href="https://scholar.google.com/citations?user=B6tpjKkAAAAJ&hl=en&oi=sra">google scholar</a>
+  <a href="https://www.linkedin.com/in/seungwook-han/">linkedin</a>
+  <a href="https://github.com/hanseungwook">github</a>
+  <a href="https://x.com/seungwookh">twitter</a>
+</nav>
+<main class="wrapper">
+    <h1>hey, i'm seungwook.</h1>
+    <p class="lead">
+        i'm seungwook, from seoul, korea.
+    </p>
+    <p class="lead">
+        in my research, i've been thinking about how we're shifting from a compute-bound to a data-bound paradigm. 
+        we can now learn from data far faster than we can generate it ourselves—at least for text and images. 
+        this raises a question: <strong> how do we move beyond the limits of "real" data? </strong> my work has been leaning toward synthetic data. 
+        under that broad umbrella, i've been exploring how we can use synthetic data to learn a universal representation or prior that can quickly adapt across modalities.
+    </p>
+    <p class="lead">
+        outside of research, i love playing squash. i've been at it for about 2.5 years, still learning, but it's been a lot of fun. i welcome anyone to join me in this small endeavor to live a longer, healthier life.
+    </p>
+    <p class="lead">
+        currently, i'm at <a href="https://csail.mit.edu/">MIT CSAIL</a> as a 4th-year PhD student, advised by Prof. <a href="https://people.csail.mit.edu/pulkitag">Pulkit Agrawal</a>.
+    </p>
+
+  <section class="section">
+    <h2>a few achievements:</h2>
+    <ul>
+      <li> magna cum laude from <a href="https://www.college.columbia.edu">Columbia</a></li>
+      <li>founded a <a href="https://www.youtube.com/@MITSquash">korean squash club </a> at MIT</a></li>
+      <li>got the NSF CSGrad4US Graduate Fellowship</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>some publications i've worked on:</h2>
+    <ul>
+      <li><a href="https://improbableai.notion.site/General-Intelligence-Requires-Reward-Based-Pretraining-2023b66e4cf580d3ab44c7860b75d25f">General Intelligence Requires Reward-based Pretraining</a> by <strong>Seungwook Han</strong>, Jyothish Pari, Samuel J. Gershman, Pulkit Agrawal. <strong> ICLR 2025 Spotlight (top 2.5%)</strong>.</li>
+      <li><a href="https://arxiv.org/abs/2412.12276">Emergence and Effectiveness of Task Vectors in In-Context Learning: An Encoder Decoder Perspective</a> by <strong>Seungwook Han</strong>, Jinyeop Song, Jeff Gore, Pulkit Agrawal. <strong> ICLR 2025 Spotlight (top 2.5%)</strong>.</li>
+      <li><a href="https://arxiv.org/abs/2405.06639">Value Augmented Sampling for Language Model Alignment and Personalization</a> by <strong>Seungwook Han</strong>, Idan Shenfeld, Akash Srivastava, Yoon Kim, Pulkit Agrawal. ICLR 2024 Workshop on Reliable and Responsible Foundation Models (<strong>Oral Talk</strong>).</li>
+      <li><a href="https://hierarchical-planning-foundation-model.github.io/">Compositional Foundation Models for Hierarchical Planning</a> by <strong>Seungwook Han</strong>, Anurag Ajay, Yilun Du, Shuang Li, Abhishek Gupta, Tommi Jaakkola, Josh Tenenbaum, Leslie Kaelbling, Akash Srivastava, Pulkit Agrawal. NeurIPS 2024.</li>
+    </ul>
+    <p class="lead">more to see on <a href="https://scholar.google.com/citations?user=B6tpjKkAAAAJ&hl=en&oi=sra">google scholar</a> and more to come.</p>
+  </section>
+
+  <!-- <section class="section">
+    <h2>tl;dr:</h2>
+    <p>i started selling toys in 1st grade.</p>
+    <p>i've had nearly every side hustle since. making clothes, selling snacks, designing logos, & editing videos are a few.</p>
+    <p>i'm a fan of the process. i love turning basic ideas into something great.</p>
+  </section> -->
+
+  <hr />
+  <p id="contact" class="footer">say hi: <a href="mailto:swhan@mit.edu">swhan [at] mit [dot] edu</a></p>
+</main>
+</body>
+</html>
