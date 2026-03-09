@@ -26,6 +26,7 @@ a:hover{opacity:.85}
 .post-list li{margin:0 0 24px;padding:0}
 .post-list a{font-size:18px;font-family:"Geist Mono", monospace;text-decoration:none;color:var(--fg);border-bottom:1px solid transparent}
 .post-list a:hover{color:var(--link);border-bottom-color:var(--link)}
+.post-teaser{display:block;max-width:100%;height:auto;border-radius:6px;margin-bottom:8px}
 .post-date{display:block;font-size:13px;color:var(--muted);font-family:"Geist Mono", monospace;margin-top:2px}
 .footer{color:#777;font-size:13px;margin-top:60px;font-family:"Geist Mono", monospace}
 @media (max-width:640px){h1{font-size:34px}.topnav{position:static;margin-bottom:12px}.brand{position:absolute}}
@@ -42,7 +43,10 @@ a:hover{opacity:.85}
 
   <ul class="post-list">
     <li>
-      <a href="/blog/nca-pre-pre-training/">Training Language Models via Neural Cellular Automata</a>
+      <a href="/blog/nca-pre-pre-training/">
+        <img src="/blog/nca-pre-pre-training/teaser.png" alt="NCA Pre-Pre-Training teaser" class="post-teaser" />
+        Training Language Models via Neural Cellular Automata
+      </a>
       <span class="post-date">2026</span>
     </li>
   </ul>
