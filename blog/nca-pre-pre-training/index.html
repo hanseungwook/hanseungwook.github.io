@@ -163,6 +163,15 @@ body {
   animation: fadeUp 0.8s ease forwards 0.6s;
 }
 
+.hero-venue {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin-top: 24px;
+  line-height: 1.7;
+}
+
 .hero-stats {
   display: flex;
   gap: 48px;
@@ -586,8 +595,8 @@ html.theme-transition *::after {
 }
 
 @media (max-width: 640px) {
-  .vbar-chart { gap: 8px; }
-  .vbar-area { height: 150px; gap: 4px; }
+  .vbar-chart { flex-direction: column; gap: 24px; }
+  .vbar-area { height: 220px; gap: 4px; }
   .vbar-col { width: 28px; }
   .vbar-method-label { width: 28px; font-size: 8px; }
   .vbar-value { font-size: 9px; }
@@ -712,6 +721,7 @@ html.theme-transition *::after {
 
 .chart-legend {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   margin-top: 20px;
   font-size: 12px;
@@ -932,7 +942,7 @@ html.theme-transition *::after {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 24px 28px;
+  padding: 56px 28px 24px;
   margin: 24px 0;
   position: relative;
   overflow: hidden;
@@ -1033,6 +1043,7 @@ footer a {
   <div class="hero-label">Research Paper Blog</div>
   <h1>Training Language Models<br>via <em>Neural Cellular Automata</em></h1>
   <p class="hero-sub">What if the path to smarter language models doesn't require more text — but synthetic data from abstract dynamical systems?</p>
+  <p class="hero-venue"><strong>Accepted at NeurIPS 2026.</strong><br><strong>Oral</strong> at the NeurIPS 2026 Workshop on Transitioning from Pre-Training to Post-Training.</p>
   <div class="hero-stats">
     <div class="hero-stat">
       <div class="number">6%</div>
@@ -1084,7 +1095,7 @@ footer a {
 <section id="approach">
   <div class="section-label">02 — The Approach</div>
   <h2>Neural Cellular Automata as synthetic fuel</h2>
-  <p><strong>Neural cellular automata (NCA) generalize systems like Conway's Game of Life by replacing fixed rules with neural networks. Each randomly-sampled network defines a unique transition rule, producing diverse spatiotemporal dynamics on a grid. When unrolled over long horizons, these dynamics give rise to a rich spectrum of behaviors — from simple patterns that converge to a fixed attractor state to complex structures that emerge gradually over time.</p>
+  <p><strong>Neural cellular automata (NCA) generalize systems like Conway's Game of Life by replacing fixed rules with neural networks.</strong> Each randomly-sampled network defines a unique transition rule, producing diverse spatiotemporal dynamics on a grid. When unrolled over long horizons, these dynamics give rise to a rich spectrum of behaviors — from simple patterns that converge to a fixed attractor state to complex structures that emerge gradually over time.</p>
 
   <!-- Interactive NCA Demo -->
   <div class="nca-demo">
@@ -1308,7 +1319,7 @@ footer a {
     </div>
   </div>
 
-  <p>Surprisingly, we observe that our non-linguistic NCA data outperforms natural language at equal scale. So, we investigate further: what happens if we give C4 <strong>~10× more data</strong>? We scale C4 pre-pre-training to 1.6B tokens while keeping NCA at 164M. Even with this data advantage, NCA still <strong></strong>converges 1.4x faster and achieves 5% better final perplexity </strong>.</p>
+  <p>Surprisingly, we observe that our non-linguistic NCA data outperforms natural language at equal scale. So, we investigate further: what happens if we give C4 <strong>~10× more data</strong>? We scale C4 pre-pre-training to 1.6B tokens while keeping NCA at 164M. Even with this data advantage, NCA still <strong>converges 1.4x faster and achieves 5% better final perplexity</strong>.</p>
 
   <div class="chart-wrapper" id="scale-chart">
     <h4>OpenWebText: NCA (164M tokens) vs C4 (1.6B tokens)</h4>
@@ -1438,11 +1449,14 @@ footer a {
   <p>If you find this work useful, please consider citing our paper:</p>
   <div class="bibtex-block">
     <button class="copy-btn" onclick="copyBibtex()" id="copy-btn">Copy</button>
-<pre id="bibtex-text">@inproceedings{placeholder2026nca,
+<pre id="bibtex-text">@misc{lee2026traininglanguagemodelsneural,
   title={Training Language Models via Neural Cellular Automata},
-  author={Seungwook Han and Dan Lee and Akarsh Kumar and Pulkit Agrawal},
-  booktitle={TBD,
-  year={2026}
+  author={Dan Lee and Seungwook Han and Akarsh Kumar and Pulkit Agrawal},
+  year={2026},
+  eprint={2603.10055},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2603.10055}
 }</pre>
   </div>
 </section>
@@ -1510,7 +1524,10 @@ function resizeCanvas() {
   gridH = Math.ceil(canvas.height / cellSize);
 }
 resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
+window.addEventListener('resize', () => {
+  resizeCanvas();
+  initBgGrid();
+});
 
 let bgGrid = [];
 function initBgGrid() {
@@ -1749,7 +1766,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) e.target.classList.add('visible');
   });
-}, { threshold: 0.15 });
+}, { threshold: 0 });
 
 document.querySelectorAll('section:not(.hero)').forEach(s => observer.observe(s));
 
